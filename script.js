@@ -2,10 +2,11 @@
 
 var output = document.getElementById('greeter-output');
 var output3 = document.getElementById('greeter-output3');
+var archive = document.getElementById('archive');
 var button = document.getElementById('greeter-button');
+var button2 = document.getElementById('greeter-button2');
 var celsius;
 var fahrenheit;
-var button2 = document.getElementById('greeter-button2');
 var celsius2;
 var fahrenheit2;
 
@@ -22,9 +23,6 @@ return (x - 32) /1.8;
 function water(x) {if  (x <= 0 && x >= -273.15) {
     output3.innerHTML = 'W tej temperaturze woda przyjmuje postać lodu' + '<br><br>';
   }
-   else if  (x < -273.15) {
-    output3.innerHTML = ' '+x+' stopni Celsjusza? Taka temperatura nie jest fizycznie możliwa' + '<br><br>';
-  }
   else if (x > 0 && x < 100) {
     output3.innerHTML = 'W tej temperaturze woda jest cieczą' + '<br><br>';
   }
@@ -34,6 +32,9 @@ function water(x) {if  (x <= 0 && x >= -273.15) {
 }
 //Dodaj funkcję, która wyświetla tekst na stronie, odpowiednio dodając nową linię.
 // \n` dodaje nową linię
+function newLine() {
+    archive.innerHtml += ('<br />');
+}
 
 output.innerHTML = '<br><br>'; 
 button.addEventListener('click', function(){
@@ -61,14 +62,12 @@ if (isNaN(celsius))  {
 });
    
 button2.addEventListener('click', function(){
-	
 	fahrenheit2 = window.prompt('Podaj, proszę temperaturę w stopniach Fahrenheita');
-
-  if (fahrenheit2 === null){
-    output.innerHTML = 'Kliknięto "anuluj". Rezygnujesz?' + '<br><br>';
-  } else {
-      var fahrenheit2= fahrenheit2.replace (',', '.');
-      if (isNaN(fahrenheit2))  {
+	if (fahrenheit2 === null){
+    	output.innerHTML = 'Kliknięto "anuluj". Rezygnujesz?' + '<br><br>';
+      } else {
+        var fahrenheit2= fahrenheit2.replace (',', '.');
+        if (isNaN(fahrenheit2))  {
         output.innerHTML = 'Wpisz tylko cyfry' + '<br><br>';
       } else if (fahrenheit2 === '') {
         output.innerHTML = 'Nic nie wpisano' + '<br><br>';
