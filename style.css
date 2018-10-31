@@ -29,3 +29,8 @@ button {
 		background-color: #fff;
 	}
 }
+
+.greeter-output4 {
+	display: inline-block;
+	 text-align: center;	
+}
