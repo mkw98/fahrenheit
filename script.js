@@ -31,9 +31,9 @@ function water(x) {if  (x <= 0 && x >= -273.15) {
   }
 }
 //Dodaj funkcję, która wyświetla tekst na stronie, odpowiednio dodając nową linię.
-// \n` dodaje nową linię
+
 function newLine() {
-    archive.innerHtml += ('<br />');
+    archive.innerHtml += output.innerHTML + '<br><br>';
 }
 
 output.innerHTML = '<br><br>'; 
@@ -58,6 +58,8 @@ if (isNaN(celsius))  {
     fahrenheit = CtoF(celsius);
     output.innerHTML = ' '+celsius+' stopni Celsjusza to '+fahrenheit+' stopni Fahrenheita!'
     water(celsius);
+    newLine();
+   
     }
 });
    
@@ -78,6 +80,7 @@ button2.addEventListener('click', function(){
         celsius2 = FtoC(fahrenheit2);
 		output.innerHTML = ' '+fahrenheit2+' stopni Fahrenheita to '+celsius2+' stopni Celsjusza!'
 		water(celsius2);
+	      	newLine();
        }
     }
   });
