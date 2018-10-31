@@ -35,21 +35,23 @@ return (9/5) * x + 32;
 }; 
 //Funkcja, która przyjmuje temperaturę C i zwraca informację np. o stanie skupienia wody.
 function water(x) {if  (x <= 0 && x >= -273.15) {
-    output.innerHTML = ' '+x+' stopni Celsjusza to '+fahrenheit+' stopni Fahrenheita! W tej temperaturze woda przyjmuje postać lodu' + '<br><br>';
+    output3.innerHTML = 'W tej temperaturze woda przyjmuje postać lodu' + '<br><br>';
   }
    else if  (x < -273.15) {
     output.innerHTML = ' '+x+' stopni Celsjusza? Taka temperatura nie jest fizycznie możliwa' + '<br><br>';
   }
   else if (x > 0 && x < 100) {
-    output.innerHTML = ' '+x+' stopni Celsjusza to '+fahrenheit+' stopni Fahrenheita! W tej temperaturze woda jest cieczą' + '<br><br>';
+    output3.innerHTML = 'W tej temperaturze woda jest cieczą' + '<br><br>';
   }
   else if (x >= 100) {
-    output.innerHTML = ' '+x+' stopni Celsjusza to '+fahrenheit+' stopni Fahrenheita! W tej temperaturze woda zamienia się w parę.' + '<br><br>';
+    output3.innerHTML = ' W tej temperaturze woda zamienia się w parę.' + '<br><br>';
   }
 }
 //Funkcję, która wyświetla tekst na stronie, odpowiednio dodając nową linię.
 
 var output = document.getElementById('greeter-output');
+var output3 = document.getElementById('greeter-output3');
+var output4 = document.getElementById('greeter-output4');
 
 output.innerHTML = 'Kliknij i podaj temperaturę w stopniach Celsjusza' + '<br><br>' + output.innerHTML; 
 
@@ -73,6 +75,7 @@ if (isNaN(celsius))  {
   }
   else {
     fahrenheit = CtoF(celsius);
+     output.innerHTML = ' '+celsius+' stopni Celsjusza to '+fahrenheit+' stopni Fahrenheita!'
     water(celsius);
     }
 });
