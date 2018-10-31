@@ -16,7 +16,7 @@ return 1.8 * x - 32;
 
 //Funkcja, która przyjmuje temperaturę F i zwraca temperaturę C.
 function FtoC(x) {
-return (x − 32) /1.8;
+return (x - 32) /1.8;
 }; 
 //Funkcja, która przyjmuje temperaturę C i zwraca informację np. o stanie skupienia wody.
 function water(x) {if  (x <= 0 && x >= -273.15) {
