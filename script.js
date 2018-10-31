@@ -28,27 +28,31 @@ function water(x) {if  (x <= 0 && x >= -273.15) {
   }
   else if (x >= 100) {
     output3.innerHTML = ' W tej temperaturze woda zamienia się w parę.' + '<br><br>';
-  }
+  }		   
 }
 //Dodaj funkcję, która wyświetla tekst na stronie, odpowiednio dodając nową linię.
 
 function newLine() {
-    archive.innerHtml += output.innerHTML + '<br><br>';
+    archive.innerHTML += output.innerHTML + '<br><br>';
 }
-
+function waterError() {
+	output3.innerHTML = ' Tu pojawi się informacja o stanie skupienia wody.';
+}	
 output.innerHTML = '<br><br>'; 
 button.addEventListener('click', function(){
-	
 	celsius = window.prompt('Podaj, proszę temperaturę w stopniach Celsjusza');
-if (celsius === null){
+  if (celsius === null){
     output.innerHTML = 'Kliknięto "anuluj". Rezygnujesz?' + '<br><br>';
+    waterError();
  }
   else var celsius= celsius.replace (',', '.'); 
 if (isNaN(celsius))  {
     output.innerHTML = 'Wpisz tylko cyfry' + '<br><br>';
+    waterError();
   }
   else if(celsius === '') {
     output.innerHTML = 'Nic nie wpisano' + '<br><br>';
+    waterError();
   }
   else if (celsius < -273.15) {
     output.innerHTML = ' '+celsius+' stopni Celsjusza?';
@@ -67,12 +71,15 @@ button2.addEventListener('click', function(){
 	fahrenheit2 = window.prompt('Podaj, proszę temperaturę w stopniach Fahrenheita');
 	if (fahrenheit2 === null){
     	output.innerHTML = 'Kliknięto "anuluj". Rezygnujesz?' + '<br><br>';
+		waterError()
       } else {
         var fahrenheit2= fahrenheit2.replace (',', '.');
         if (isNaN(fahrenheit2))  {
         output.innerHTML = 'Wpisz tylko cyfry' + '<br><br>';
+	waterError();
       } else if (fahrenheit2 === '') {
         output.innerHTML = 'Nic nie wpisano' + '<br><br>';
+        waterError()
       } else if (fahrenheit2 < -459.67) {
           output.innerHTML = ' '+fahrenheit2+' stopni Fahrenheita?';
 	  output3.innerHTML = 'Taka temperatura nie jest fizycznie możliwa';
