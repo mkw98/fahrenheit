@@ -78,7 +78,7 @@ button2.addEventListener('click', function(){
           output2.innerHTML = ' '+fahrenheit2+' stopni Fahrenheita? Taka temperatura nie jest fizycznie możliwa' + '<br><br>';
       } else {
         celsius2 = FtoC(fahrenheit2);
-	output2.innerHTML = ' '+fahrenheit2+' stopni Fahrenheita to '+celsius2+' stopni Celsjusza! + '<br><br>';
+	output2.innerHTML = ' '+fahrenheit2+' stopni Fahrenheita to '+celsius2+' stopni Celsjusza! + '<br><br>'
 	water(celsius)2;
        }
     }
