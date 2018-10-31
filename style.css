@@ -47,3 +47,11 @@ button {
 	padding: 10px;
 	border: dotted green;
 }	
+
+#archive {
+	display: block;
+	text-align: center;
+	margin: 10px;
+	padding: 10px;
+	border: dotted green;
+}	
