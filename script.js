@@ -38,7 +38,7 @@ function water(x) {if  (x <= 0 && x >= -273.15) {
     output3.innerHTML = 'W tej temperaturze woda przyjmuje postać lodu' + '<br><br>';
   }
    else if  (x < -273.15) {
-    output.innerHTML = ' '+x+' stopni Celsjusza? Taka temperatura nie jest fizycznie możliwa' + '<br><br>';
+    output3.innerHTML = ' '+x+' stopni Celsjusza? Taka temperatura nie jest fizycznie możliwa' + '<br><br>';
   }
   else if (x > 0 && x < 100) {
     output3.innerHTML = 'W tej temperaturze woda jest cieczą' + '<br><br>';
