@@ -2,12 +2,10 @@
 
 var output = document.getElementById('greeter-output');
 var output3 = document.getElementById('greeter-output3');
-var output4 = document.getElementById('greeter-output4');
 var button = document.getElementById('greeter-button');
 var celsius;
 var fahrenheit;
 var button2 = document.getElementById('greeter-button2');
-var output2 = document.getElementById('greeter-output2');
 var celsius2;
 var fahrenheit2;
 
@@ -37,7 +35,7 @@ function water(x) {if  (x <= 0 && x >= -273.15) {
 //Dodaj funkcję, która wyświetla tekst na stronie, odpowiednio dodając nową linię.
 // \n` dodaje nową linię
 
-output.innerHTML = 'Kliknij i podaj temperaturę w stopniach Celsjusza' + '<br><br>' + output.innerHTML; 
+output.innerHTML = '<br><br>'; 
 button.addEventListener('click', function(){
 	
 	celsius = window.prompt('Podaj, proszę temperaturę w stopniach Celsjusza');
@@ -52,8 +50,8 @@ if (isNaN(celsius))  {
     output.innerHTML = 'Nic nie wpisano' + '<br><br>';
   }
   else if (celsius < -273.15) {
-    output.innerHTML = ' '+celsius+' stopni Celsjusza? Taka temperatura nie jest fizycznie możliwa';
-    output3.innerHTML = '<br><br>';
+    output.innerHTML = ' '+celsius+' stopni Celsjusza?';
+    output3.innerHTML = 'Taka temperatura nie jest fizycznie możliwa';
   }
   else {
     fahrenheit = CtoF(celsius);
@@ -62,26 +60,25 @@ if (isNaN(celsius))  {
     }
 });
    
-output2.innerHTML = 'Kliknij i podaj temperaturę w stopniach Fahrenheita' + '<br><br>' + output2.innerHTML; 
 button2.addEventListener('click', function(){
 	
 	fahrenheit2 = window.prompt('Podaj, proszę temperaturę w stopniach Fahrenheita');
 
   if (fahrenheit2 === null){
-    output2.innerHTML = 'Kliknięto "anuluj". Rezygnujesz?' + '<br><br>';
+    output.innerHTML = 'Kliknięto "anuluj". Rezygnujesz?' + '<br><br>';
   } else {
       var fahrenheit2= fahrenheit2.replace (',', '.');
       if (isNaN(fahrenheit2))  {
-        output2.innerHTML = 'Wpisz tylko cyfry' + '<br><br>';
+        output.innerHTML = 'Wpisz tylko cyfry' + '<br><br>';
       } else if (fahrenheit2 === '') {
-        output2.innerHTML = 'Nic nie wpisano' + '<br><br>';
+        output.innerHTML = 'Nic nie wpisano' + '<br><br>';
       } else if (fahrenheit2 < -459.67) {
-          output2.innerHTML = ' '+fahrenheit2+' stopni Fahrenheita? Taka temperatura nie jest fizycznie możliwa';
-	  output4.innerHTML = '<br><br>';
+          output.innerHTML = ' '+fahrenheit2+' stopni Fahrenheita?';
+	  output3.innerHTML = 'Taka temperatura nie jest fizycznie możliwa';
       } else {
         celsius2 = FtoC(fahrenheit2);
-	output2.innerHTML = ' '+fahrenheit2+' stopni Fahrenheita to '+celsius2+' stopni Celsjusza!'
-	water(celsius2);
+		output.innerHTML = ' '+fahrenheit2+' stopni Fahrenheita to '+celsius2+' stopni Celsjusza!'
+		water(celsius2);
        }
     }
   });
