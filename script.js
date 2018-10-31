@@ -52,7 +52,8 @@ if (isNaN(celsius))  {
     output.innerHTML = 'Nic nie wpisano' + '<br><br>';
   }
   else if (celsius < -273.15) {
-    output.innerHTML = ' '+celsius+' stopni Celsjusza? Taka temperatura nie jest fizycznie możliwa' + '<br><br>';
+    output.innerHTML = ' '+celsius+' stopni Celsjusza? Taka temperatura nie jest fizycznie możliwa';
+    output3.innerHTML = '<br><br>';
   }
   else {
     fahrenheit = CtoF(celsius);
@@ -75,7 +76,8 @@ button2.addEventListener('click', function(){
       } else if (fahrenheit2 === '') {
         output2.innerHTML = 'Nic nie wpisano' + '<br><br>';
       } else if (fahrenheit2 < -459.67) {
-          output2.innerHTML = ' '+fahrenheit2+' stopni Fahrenheita? Taka temperatura nie jest fizycznie możliwa' + '<br><br>';
+          output2.innerHTML = ' '+fahrenheit2+' stopni Fahrenheita? Taka temperatura nie jest fizycznie możliwa';
+	  output4.innerHTML = '<br><br>';
       } else {
         celsius2 = FtoC(fahrenheit2);
 	output2.innerHTML = ' '+fahrenheit2+' stopni Fahrenheita to '+celsius2+' stopni Celsjusza!'
