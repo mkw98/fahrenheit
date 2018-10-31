@@ -31,10 +31,10 @@ function water(x) {if  (x <= 0 && x >= -273.15) {
   }		   
 }
 //Dodaj funkcję, która wyświetla tekst na stronie, odpowiednio dodając nową linię.
-
 function newLine() {
     archive.innerHTML += output.innerHTML + '<br><br>';
 }
+//dodtakowa funkcja, żeby nie powtarzać 6x tego samegotekstu w kodzie
 function waterError() {
 	output3.innerHTML = ' Tu pojawi się informacja o stanie skupienia wody.';
 }	
@@ -45,7 +45,7 @@ button.addEventListener('click', function(){
     output.innerHTML = 'Kliknięto "anuluj". Rezygnujesz?' + '<br><br>';
     waterError();
  }
-  else var celsius= celsius.replace (',', '.'); 
+  else {var celsius= celsius.replace (',', '.'); 
 if (isNaN(celsius))  {
     output.innerHTML = 'Wpisz tylko cyfry' + '<br><br>';
     waterError();
@@ -63,8 +63,8 @@ if (isNaN(celsius))  {
     output.innerHTML = ' '+celsius+' stopni Celsjusza to '+fahrenheit+' stopni Fahrenheita!'
     water(celsius);
     newLine();
-   
     }
+  }
 });
    
 button2.addEventListener('click', function(){
