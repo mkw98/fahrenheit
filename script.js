@@ -78,7 +78,7 @@ button2.addEventListener('click', function(){
           output2.innerHTML = ' '+fahrenheit2+' stopni Fahrenheita? Taka temperatura nie jest fizycznie możliwa' + '<br><br>';
       } else {
         celsius2 = FtoC(fahrenheit2);
-	output2.innerHTML = ' '+fahrenheit2+' stopni Fahrenheita to '+celsius2+' stopni Celsjusza!;
+	output2.innerHTML = ' '+fahrenheit2+' stopni Fahrenheita to '+celsius2+' stopni Celsjusza!+ '<br><br>';
         if (celsius2 <= 0 && celsius2 > -273.15) {
            output4.innerHTML = ' W tej temperaturze woda przyjmuje postać lodu' + '<br><br>'; 
         } else if (celsius2 > 0 && celsius2 <100 ) {
