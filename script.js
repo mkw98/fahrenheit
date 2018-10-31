@@ -11,12 +11,12 @@ var fahrenheit2;
 
 //Funkcja, która przyjmuje temperaturę C i zwraca temperaturę F.
 function CtoF(x) {
-return (5/9) * (x - 32);
+return 1.8 * x - 32;
 };
 
 //Funkcja, która przyjmuje temperaturę F i zwraca temperaturę C.
 function FtoC(x) {
-return (9/5) * x + 32;
+return (x − 32) /1.8;;
 }; 
 //Funkcja, która przyjmuje temperaturę C i zwraca informację np. o stanie skupienia wody.
 function water(x) {if  (x <= 0 && x >= -273.15) {
