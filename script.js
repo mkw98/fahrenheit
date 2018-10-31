@@ -1,12 +1,8 @@
 'use strict';
 
-//Dodaj funkcję, która wyświetla tekst na stronie, odpowiednio dodając nową linię.
-// \n` dodaje nową linię
-
 var output = document.getElementById('greeter-output');
 var output3 = document.getElementById('greeter-output3');
 var output4 = document.getElementById('greeter-output4');
-output.innerHTML = 'Kliknij i podaj temperaturę w stopniach Celsjusza' + '<br><br>' + output.innerHTML; 
 var button = document.getElementById('greeter-button');
 var celsius;
 var fahrenheit;
@@ -38,8 +34,10 @@ function water(x) {if  (x <= 0 && x >= -273.15) {
     output3.innerHTML = ' W tej temperaturze woda zamienia się w parę.' + '<br><br>';
   }
 }
-//Funkcję, która wyświetla tekst na stronie, odpowiednio dodając nową linię.
+//Dodaj funkcję, która wyświetla tekst na stronie, odpowiednio dodając nową linię.
+// \n` dodaje nową linię
 
+output.innerHTML = 'Kliknij i podaj temperaturę w stopniach Celsjusza' + '<br><br>' + output.innerHTML; 
 button.addEventListener('click', function(){
 	
 	celsius = window.prompt('Podaj, proszę temperaturę w stopniach Celsjusza');
@@ -84,9 +82,9 @@ button2.addEventListener('click', function(){
         if (celsius2 <= 0 && celsius2 > -273.15) {
            output4.innerHTML = ' W tej temperaturze woda przyjmuje postać lodu' + '<br><br>'; 
         } else if (celsius2 > 0 && celsius2 <100 ) {
-          output4.innerHTML = ' W tej temperaturze woda jest cieczą' + '<br><br>'+ output2.innerHTML;
+          output4.innerHTML = ' W tej temperaturze woda jest cieczą' + '<br><br>';
         } else if (celsius2 >= 100) {
-          output4.innerHTML = ' W tej temperaturze woda zmienia się w parę' + '<br><br>'+ output2.innerHTML;
+          output4.innerHTML = ' W tej temperaturze woda zmienia się w parę' + '<br><br>';
         }
       }
     }
