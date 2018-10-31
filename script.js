@@ -73,9 +73,12 @@ if (isNaN(celsius))  {
   else if(celsius === '') {
     output.innerHTML = 'Nic nie wpisano' + '<br><br>';
   }
+  else if ( (celsius < -273.15) {
+    output.innerHTML = ' '+celsius+' stopni Celsjusza? Taka temperatura nie jest fizycznie możliwa' + '<br><br>';
+  }
   else {
     fahrenheit = CtoF(celsius);
-     output.innerHTML = ' '+celsius+' stopni Celsjusza to '+fahrenheit+' stopni Fahrenheita!'
+    output.innerHTML = ' '+celsius+' stopni Celsjusza to '+fahrenheit+' stopni Fahrenheita!'
     water(celsius);
     }
 });
@@ -98,12 +101,13 @@ button2.addEventListener('click', function(){
         output2.innerHTML = 'Wpisz tylko cyfry' + '<br><br>';
       } else if (fahrenheit2 === '') {
         output2.innerHTML = 'Nic nie wpisano' + '<br><br>';
+	else if (celsius2 < -273.15) {
+          output2.innerHTML = ' '+fahrenheit2+' stopni Fahrenheita? Taka temperatura nie jest fizycznie możliwa' + '<br><br>';
       } else {
         celsius2 = FtoC(fahrenheit2);
         if (celsius2 <= 0 && celsius2 > -273.15) {
            output2.innerHTML = ' '+fahrenheit2+' stopni Fahrenheita to '+celsius2+' stopni Celsjusza! W tej temperaturze woda przyjmuje postać lodu' + '<br><br>';
-        } else if (celsius2 < -273.15) {
-          output2.innerHTML = ' '+fahrenheit2+' stopni Fahrenheita? Taka temperatura nie jest fizycznie możliwa' + '<br><br>'+ output2.innerHTML;
+        
         } else if (celsius2 > 0 && celsius2 <100 ) {
           output2.innerHTML = ' '+fahrenheit2+' stopni Fahrenheita to '+celsius2+' stopni Celsjusza! W tej temperaturze woda jest cieczą' + '<br><br>'+ output2.innerHTML;
         } else if (celsius2 >= 100) {
