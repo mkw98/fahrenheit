@@ -74,7 +74,7 @@ button2.addEventListener('click', function(){
         output2.innerHTML = 'Wpisz tylko cyfry' + '<br><br>';
       } else if (fahrenheit2 === '') {
         output2.innerHTML = 'Nic nie wpisano' + '<br><br>';
-	else if (celsius2 < -273.15) {
+	else if (fahrenheit2 < −459.67) {
           output2.innerHTML = ' '+fahrenheit2+' stopni Fahrenheita? Taka temperatura nie jest fizycznie możliwa' + '<br><br>';
       } else {
         celsius2 = FtoC(fahrenheit2);
